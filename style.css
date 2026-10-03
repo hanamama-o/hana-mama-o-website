@@ -1,0 +1,708 @@
+/* =========================================================
+   HANA, IN PIECES ♡
+   SOUR-inspired scrapbook portfolio
+   ========================================================= */
+
+/* ---------- BASIC SETTINGS ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f2f5;
+    color: #252025;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ---------- HEADER / NAVIGATION ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(247, 242, 245, 0.94);
+    border-bottom: 1px solid #d9cbd5;
+    backdrop-filter: blur(8px);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    min-height: 72px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #27212a;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #4c3a4b;
+    text-decoration: none;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    background: #d9c3d9;
+    transform: rotate(-2deg);
+}
+
+
+/* ---------- GENERAL ---------- */
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 95px 25px;
+}
+
+.section-label {
+    color: #8c4d76;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 0.95;
+    font-style: italic;
+    letter-spacing: -4px;
+}
+
+h1 span {
+    color: #8d4f78;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin: 7px 0 12px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ---------- HOME ---------- */
+
+.hero {
+    min-height: calc(100vh - 72px);
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 25px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.small-note {
+    color: #8c4d76;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 25px 0 15px;
+}
+
+.intro {
+    max-width: 580px;
+    margin-bottom: 30px;
+    color: #5c535d;
+}
+
+.button {
+    display: inline-block;
+    background: #7e4b72;
+    color: white;
+    text-decoration: none;
+    padding: 12px 21px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 #c8a6c3;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 #c8a6c3;
+}
+
+.scrapbook-photo {
+    position: relative;
+    background: white;
+    padding: 15px 15px 55px;
+    transform: rotate(4deg);
+    box-shadow: 8px 10px 25px rgba(50, 30, 50, 0.14);
+}
+
+.scrapbook-photo img {
+    aspect-ratio: 4 / 5;
+}
+
+.scrapbook-photo p {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.tape {
+    position: absolute;
+    width: 95px;
+    height: 27px;
+    background: #d9c4da;
+    opacity: 0.8;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.paper-card,
+.facts-card {
+    background: #fff;
+    padding: 35px;
+    border: 1px solid #dfd2dc;
+    box-shadow: 5px 6px 0 #dbc7d8;
+}
+
+.paper-card {
+    transform: rotate(-1deg);
+}
+
+.paper-card p + p {
+    margin-top: 20px;
+}
+
+.fact {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed #d6c8d4;
+}
+
+.fact:last-child {
+    border-bottom: 0;
+}
+
+.fact > span {
+    font-size: 1.7rem;
+}
+
+
+/* ---------- TIMELINE ---------- */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    border-left: 2px dashed #b895b3;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    background: #fff;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border: 1px solid #ded0dc;
+    box-shadow: 4px 5px 0 #dfcedc;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -57px;
+    top: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #8d527d;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.timeline-year {
+    color: #986184;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.project-grid {
+    display: grid;
+    gap: 50px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.project-card.reverse {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.project-card.reverse .project-image {
+    order: 2;
+}
+
+.project-card.reverse .project-content {
+    order: 1;
+}
+
+.project-image {
+    background: white;
+    padding: 12px;
+    box-shadow: 7px 8px 0 #d8c1d5;
+    transform: rotate(-2deg);
+}
+
+.project-card.reverse .project-image {
+    transform: rotate(2deg);
+}
+
+.project-image img {
+    aspect-ratio: 4 / 3;
+}
+
+.project-number {
+    color: #8c4d76;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.mini-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.mini-gallery img {
+    height: 130px;
+    border: 5px solid white;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.12);
+}
+
+.food-tags,
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.food-tags span,
+.work-list span {
+    border: 1px solid #c9adc4;
+    border-radius: 20px;
+    padding: 5px 11px;
+    font-size: 0.78rem;
+    background: #faf5f9;
+}
+
+
+/* ---------- TRAVEL ---------- */
+
+.travel-section {
+    max-width: 1200px;
+}
+
+.travel-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.travel-location {
+    color: #8c4d76;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.big-quote {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+.hand-note {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-top: 25px;
+    color: #8c4d76;
+    transform: rotate(-5deg);
+}
+
+.seoul-collage {
+    position: relative;
+    min-height: 570px;
+}
+
+.seoul-collage figure {
+    position: absolute;
+    background: white;
+    padding: 12px 12px 38px;
+    box-shadow: 5px 7px 18px rgba(40, 20, 40, 0.15);
+}
+
+.seoul-collage img {
+    height: 300px;
+}
+
+.seoul-collage figcaption {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+}
+
+.tilt-left {
+    width: 60%;
+    left: 5%;
+    top: 40px;
+    transform: rotate(-5deg);
+}
+
+.tilt-right {
+    width: 55%;
+    right: 2%;
+    top: 180px;
+    transform: rotate(5deg);
+}
+
+.small-photo {
+    width: 32%;
+    right: 35%;
+    bottom: 5px;
+    transform: rotate(-3deg);
+}
+
+.small-photo img {
+    height: 180px;
+}
+
+
+/* ---------- FAVORITES ---------- */
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.favorite-card {
+    padding: 40px;
+    min-height: 290px;
+    border: 1px solid #d7c6d4;
+    box-shadow: 7px 8px 0 #dfcedc;
+}
+
+.movie-card {
+    background: #eee5f0;
+    transform: rotate(-1deg);
+}
+
+.music-card {
+    background: #f4e9e9;
+    transform: rotate(1deg);
+}
+
+.favorite-label {
+    color: #8c4d76;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.rating {
+    display: inline-block;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+.music-player {
+    margin-top: 25px;
+    background: #fff;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid #ddcedb;
+}
+
+.music-icon {
+    font-size: 1.8rem;
+}
+
+.music-player div {
+    flex: 1;
+}
+
+.music-player strong,
+.music-player small {
+    display: block;
+}
+
+.music-player small {
+    color: #887782;
+}
+
+
+/* ---------- FINAL NOTE ---------- */
+
+.final-note {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 25px 120px;
+}
+
+.note-paper {
+    background: #fff;
+    padding: 55px;
+    text-align: center;
+    border: 1px solid #d9cbd6;
+    box-shadow: 9px 10px 0 #d8c1d5;
+    transform: rotate(-1deg);
+}
+
+.note-paper h2 {
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #8c4d76;
+    margin-top: 25px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #332c35;
+    color: #eee6ed;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.8rem;
+}
+
+
+/* ---------- RESPONSIVE / MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+        padding: 5px 7px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+        gap: 50px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-photo {
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .about-grid,
+    .favorites-grid,
+    .travel-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .project-card.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card.reverse .project-image,
+    .project-card.reverse .project-content {
+        order: initial;
+    }
+
+    .seoul-collage {
+        min-height: 600px;
+    }
+
+    .big-quote {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .section {
+        padding: 70px 18px;
+    }
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .nav-links {
+        max-width: 350px;
+    }
+
+    .paper-card,
+    .facts-card,
+    .favorite-card,
+    .note-paper {
+        padding: 25px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-dot {
+        left: -46px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .seoul-collage {
+        min-height: 480px;
+    }
+
+    .seoul-collage img {
+        height: 220px;
+    }
+
+    .small-photo img {
+        height: 130px;
+    }
+}
+
+/* Train to Busan poster */
+.movie-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 190px) 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.movie-poster-wrap {
+    background: #fffafc;
+    padding: 9px;
+    border: 1px solid rgba(40, 25, 35, 0.15);
+    box-shadow: 4px 5px 0 rgba(40, 25, 35, 0.10);
+    transform: rotate(-2deg);
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .movie-card {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-poster-wrap {
+        width: min(210px, 70%);
+        margin: 0 auto;
+    }
+}
